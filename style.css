@@ -1,0 +1,426 @@
+/*  ================
+		CSS Reset
+    ================
+	
+	http://meyerweb.com/eric/tools/css/reset/ 
+	v2.0 | 20110126
+	License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+    line-height: 1.2em;
+}
+
+
+
+
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1.618em;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+
+
+
+
+
+/*  ====================
+		Custom Styles
+    ====================	*/
+
+
+
+/* THIS IS FOR STICKY NAV*/
+nav {
+    background-color: #eeece7;
+    width: 100%;
+    padding-left: 25%;
+    position:fixed;
+    top:0;
+}
+
+/*NAV HOVER EFFECTS*/
+.link {
+	outline: none;
+	text-decoration: none;
+	position: relative;
+	font-size: 1em;
+	line-height: 1;
+	color: #827d7a;
+	display: inline-block;
+    margin: 20px 50px;
+    font-family: "Fira Sans", sans-serif;
+}
+
+.link--kukuri {
+	font-weight: 400;
+	overflow: hidden;
+	line-height: 1.2em;
+	color: #b2b0a9;
+}
+
+.link--kukuri:hover {
+	color: #b2b0a9;
+}
+
+
+.link--kukuri::before {
+	content: attr(data-letters);
+	position: absolute;
+	z-index: 2;
+	overflow: hidden;
+	color: #424242;
+	white-space: nowrap;
+	width: 0%;
+	transition: width 0.4s;
+}
+
+.link--kukuri:hover::before {
+	width: 100%;
+}
+
+
+
+
+
+/*BODY*/
+
+
+body {
+    background-color: #424242;
+}
+
+
+
+
+/* VIDEO BACKGROUND */
+
+
+.background_vid {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    z-index: -100;
+}
+
+#vid {
+    position: absolute;
+    width: 100%;
+    height: 80%;
+    opacity: 0.4;
+}
+
+
+
+/*TYPEFACE*/
+.wrapper {
+    font-family: "Fira Sans", sans-serif;
+		background-color: #424242;
+}
+h4 {
+    font-size: 2em;
+    min-width: 50%;
+    max-width: 60%;
+    margin-left: 20%;
+}
+p {
+    font-weight: 100;
+}
+#typeface {
+    font-size: 8em;
+    text-align: center;
+    margin-top: 4%;
+    min-height: 640px;
+}
+#typeface h1 {
+    vertical-align: middle;
+    padding-top: 10%;
+    color: #ffffff;
+    opacity: 0.7;
+}
+.element {
+    font-family: "Fira Sans", sans-serif;
+    background-color: #ffffff;
+    color: #424242;
+}
+
+
+
+
+
+
+/* BACKGROUND OF THE FONT */
+.background {
+    width: 60%;
+    margin: auto;
+}
+
+#background {
+    display: inline-block;
+    background-color: #eeece7;
+    width: 60%;
+    height: 500px;
+    margin: 3px;
+}
+
+.erik {
+    background-image: url(https://www.tdc.org/wp-content/uploads/2016/06/spiekermann_printshop_bw.jpg);
+    background-size: cover;
+    position: relative;
+    display: inline-block;
+    float: left;
+    width: 39%;
+    height: 500px;
+    margin: 3px;
+}
+.name {
+    position: absolute;
+    top: 40px;
+    left: 40px;
+    color: #fff;
+}
+
+
+/*GLYPHS AND SYMBOLS*/
+
+.glyph {
+    font-size: 4em;
+}
+
+
+
+/*TYPE IN USE GALLERY*/
+
+div.wrap {
+  padding-left: 10%;
+}
+div.gallery1 {
+    float: left;
+    background-image: url(Use/stitchdata.png);
+    background-size: cover;
+    background-position: 0 0;
+    width: 25%;
+    min-height: 200px;
+    transition: 0.5s;
+    margin: 2%;
+}
+div.gallery2 {
+    float: left;
+    background-image: url(Use/nimblechapps.png);
+    background-size: cover;
+    background-position: 0 0;
+    width: 25%;
+    min-height: 200px;
+    transition: 0.5s;
+    margin: 2%;
+}
+div.gallery3 {
+    float: left;
+    background-image: url(Use/cantelmi.png);
+    background-size: cover;
+    background-position: 0 0;
+    width: 25%;
+    min-height: 200px;
+    transition: 0.5s;
+    margin: 2%;
+}
+div.gallery1:hover {
+    background-position: 0 -30px;
+    transition: 0.3s;
+    opacity: 0.7;
+}
+div.gallery2:hover {
+    background-position: 0 -30px;
+    transition: 0.3s;
+    opacity: 0.7;
+}
+div.gallery3:hover {
+    background-position: 0 -30px;
+    transition: 0.3s;
+    opacity: 0.7;
+}
+
+
+
+/*INTERACTIVE ELEMENT*/
+
+.editable{}
+.editable:active,.editable:focus{
+border: none;
+outline:none;
+}
+
+.thin{
+font-weight:100;
+font-style:normal;
+}
+.thin_it{
+font-weight:100;
+font-style:italic;
+}
+.x_light{
+font-weight:200;
+font-style:normal;
+}
+.x_light_it{
+font-weight:200;
+font-style:italic;
+}
+.light{
+font-weight:300;
+font-style:normal;
+}
+.light_it{
+font-weight:300;
+font-style:italic;
+}
+.regular{
+font-weight:400;
+font-style:normal;
+}
+.regular_it{
+font-weight:400;
+font-style:italic;
+}
+.medium{
+font-weight:500;
+font-style:normal;
+}
+.medium_it{
+font-weight:500;
+font-style:italic;
+}
+.s_bold{
+font-weight:600;
+font-style:normal;
+}
+.s_bold_it{
+font-weight:600;
+font-style:italic;
+}
+.bold{
+font-weight:700;
+font-style:normal;
+}
+.bold_it{
+font-weight:700;
+font-style:italic;
+}
+.x_bold{
+font-weight:800;
+font-style:normal;
+}
+.x_bold_it{
+font-weight:800;
+font-style:italic;
+}
+.black{
+font-weight:900;
+font-style:normal;
+}
+.black_it{
+font-weight:900;
+font-style:italic;
+}
+
+.interactive_weight {
+    border: 1px solid #424242;
+    width: 20%;
+    padding: 5px;
+}
+
+.interactive_button li {
+    display: inline-block;
+    margin: 1%;
+}
+
+
+/* ALT TEXT */
+
+.tooltip-toggle {
+  cursor: pointer;
+  position: relative;
+}
+  
+.tooltip-toggle::before {
+  position: absolute;
+  top: -80px;
+  left: -80px;
+  background-color: #2B222A;
+  border-radius: 5px;
+  color: #fff;
+  content: attr(aria-label);
+  padding: 1rem;
+  text-transform: none;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  width: 160px;
+}
+.tooltip-toggle::after {
+  position: absolute;
+  top: -12px;
+  left: 9px;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid #2B222A;
+  content: " ";
+  font-size: 0;
+  line-height: 0;
+  margin-left: -5px;
+  width: 0;
+}
+.tooltip-toggle::before, .tooltip-toggle::after {
+  color: #efefef;
+  font-family: "Fira Sans", sans-serif;
+  font-size: 16px;
+  opacity: 0;
+  pointer-events: none;
+  text-align: center;
+}
+.tooltip-toggle:focus::before, .tooltip-toggle:focus::after, .tooltip-toggle:hover::before, .tooltip-toggle:hover::after {
+  opacity: 1;
+  -webkit-transition: all 0.75s ease;
+  transition: all 0.75s ease;
+}
